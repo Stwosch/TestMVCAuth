@@ -1,0 +1,25 @@
+﻿@model MvcAuth.Models.Users
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@Html.ActionLink("Strona główna", "Index", "Auth")
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    
+    <div>
+        @Html.LabelFor(u => u.Email)
+        @Html.TextBoxFor(u => u.Email)
+    </div>
+    <div>
+        @Html.LabelFor(u => u.Password)
+        @Html.PasswordFor(u => u.Password)
+    </div>
+    <p>
+        <button type="submit">Log In</button>
+    </p>
+}

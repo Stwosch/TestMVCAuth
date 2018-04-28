@@ -1,0 +1,31 @@
+﻿@model MvcAuth.Models.Users
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(u => u.Email)
+        @Html.TextBoxFor(u => u.Email)
+    </div>
+    <div>
+        @Html.LabelFor(u => u.Password)
+        @Html.PasswordFor(u => u.Password)
+    </div>
+    <div>
+        @Html.LabelFor(u => u.Name)
+        @Html.TextBoxFor(u => u.Name)
+    </div>
+    <div>
+        @Html.LabelFor(u => u.Country)
+        @Html.TextBoxFor(u => u.Country)
+    </div>
+    <p>
+        <button type="submit">Register</button>
+    </p>
+}

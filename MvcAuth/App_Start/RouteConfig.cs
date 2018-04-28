@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Exercise_1___MVC_from_Scratch
+namespace MvcAuth
 {
     public class RouteConfig
     {

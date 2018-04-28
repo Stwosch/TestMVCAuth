@@ -1,0 +1,52 @@
+﻿@model MvcAuth.Models.Lists
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<p>
+    @Html.ActionLink("Wróć", "Index", "Home")
+</p>
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>
+            Enter new item:
+            <input name="new_item">
+        </label>
+    </div>
+    <div>
+        <label>
+            Public post?
+            <input type="checkbox" name="check_public">
+        </label>
+    </div>
+    <div>
+        <button type="submit">Add item</button>
+    </div>
+}
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Details</th>
+            <th>Time - Date posted</th>
+            <th>Time - Date edited</th>
+            <th>Public post</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Details</td>
+            <td>@Model.Time_Posted - @Model.Date_Posted</td>
+            <td>@Model.Time_Edited - @Model.Date_Edited</td>
+            <td>@Model.Public</td>
+        </tr>
+    </tbody>
+</table>

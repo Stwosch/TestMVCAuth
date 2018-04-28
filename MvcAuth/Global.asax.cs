@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MvcAuth.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Exercise_1___MVC_from_Scratch
+namespace MvcAuth
 {
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -13,6 +14,7 @@ namespace Exercise_1___MVC_from_Scratch
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
         }
     }
 }

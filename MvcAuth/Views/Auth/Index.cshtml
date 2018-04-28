@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MvcAuth.Models.Lists>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Details</th>
+            <th>Time - Date posted</th>
+            <th>Time - Date edited</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Details</td>
+                <td>@item.Time_Posted - @item.Date_Posted</td>
+                <td>@item.Time_Edited - @item.Date_Edited</td>
+            </tr>
+        }
+    </tbody>
+</table>
